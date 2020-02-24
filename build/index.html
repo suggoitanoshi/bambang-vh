@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>JUST Monika</title>
+    <meta name="viewport" content='width=device-width,initial-scale=1'>
+    <meta charset='utf-8'>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .overlay{
+        background: rgba(0,0,0,.2);
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        color: white;
+        padding-top: 2em;
+        font-size: 2em;
+      }
+      .box{
+        background: darkslateblue;
+        margin: auto;
+        width: max-content;
+        padding: 1em 2em;
+        border-radius: .1em;
+      }
+      .none{
+        display: none;
+      }
+      .loader{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #13112c;
+        color: white;
+        text-align: center;
+        padding-top: 25%;
+      }
+      .loader .bar-container{
+        background: white;
+        width: 75%;
+        height: 2em;
+        margin: auto;
+        border-radius: .2em;
+        box-sizing: border-box;
+        margin-bottom: 1em;
+        overflow: hidden;
+      }
+      .loader .bar-container .bar{
+        background: #0a081d;
+        height: 100%;
+        background-clip: border-box;
+        transition: width .2s;
+      }
+      #restart{
+        border: none;
+        border-radius: .1em;
+        background: rgb(216, 43, 144);
+        font-size: 3em;
+        color: white;
+        transition: .1s background;
+      }
+      #restart:hover{
+        background: rgb(173, 16, 108);
+      }
+      #splash{
+        width:auto;
+        height: 4em;
+      }
+      canvas{
+        image-rendering: optimizeQuality;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='overlay none'><div class='box'><h2>Game Over!</h2><span>Your Score: <span id='score'></span></span><br/><button id='restart'>Restart</button></div></div>
+    <!-- <div class='loader'><img id='splash' src='assets/Wristband.png'></img> <div class='bar-container'><div class='bar'></div></div><span>Loaded: <span id='load-percent'></span></span></div> -->
+    <script src='main/js/mainrender.js'></script>
+    <script src='main/js/background.js'></script>
+    <script src='main/js/pipes.js'></script>
+    <script src='main/js/eventhandler.js'></script>
+    <script src='main/js/collidable.js'></script>
+    <script src='main/js/bambang.js'></script>
+    <script src='main/js/main.js'></script>
+  </body>
+</html>
